@@ -22,12 +22,20 @@ describe ExemptProduct do
     @product_2.shelf_price.should be_kind_of(Float)
   end
 
-  it "a product's tax value is always 0" do
+  it "an exempt product's tax value is always 0" do
     @product_1.basic_tax.should eq(0)
     @product_2.basic_tax.should eq(0)
 
     @product_1.import_tax.should eq(0)
     @product_2.import_tax.should eq(0)
+
+    @product_1.tax_sum.should eq(0)
+    @product_2.tax_sum.should eq(0)
+  end
+
+  it "has a final cost which includes tax prices" do
+    @product_1.final_cost.should eq(22.17)
+    @product_2.final_cost.should eq(40)
   end
 
 end

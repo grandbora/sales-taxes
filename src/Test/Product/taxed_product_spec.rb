@@ -28,4 +28,16 @@ describe TaxedProduct do
     @product_3.import_tax.should eq(0)
   end
 
+  it "has a tax sum" do
+    @product_1.tax_sum.should eq(2.25)
+    @product_2.tax_sum.should eq(4.05)
+    @product_3.tax_sum.should eq(0.6)
+  end
+
+  it "has a final cost" do
+    @product_1.final_cost.should eq(24.42)
+    @product_2.final_cost.should eq(44.2)
+    @product_3.final_cost.should eq(6.6)
+  end
+
 end

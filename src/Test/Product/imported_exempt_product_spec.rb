@@ -28,4 +28,16 @@ describe ImportedExemptProduct do
     @product_3.import_tax.should eq(0.3)
   end
 
+  it "has a tax sum" do
+    @product_1.tax_sum.should eq(1.15)
+    @product_2.tax_sum.should eq(2.05)
+    @product_3.tax_sum.should eq(0.3)
+  end
+
+  it "has a final cost" do
+    @product_1.final_cost.should eq(23.32)
+    @product_2.final_cost.should eq(42.2)
+    @product_3.final_cost.should eq(6.3)
+  end
+
 end

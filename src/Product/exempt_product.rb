@@ -18,11 +18,19 @@ class ExemptProduct
   end
 
   def basic_tax
-    calculate_tax(@shelf_price, @basic_tax_percent)
+    calculate_tax(shelf_price, @basic_tax_percent)
   end
 
   def import_tax
-    calculate_tax(@shelf_price, @import_tax_percent)
+    calculate_tax(shelf_price, @import_tax_percent)
+  end
+
+  def tax_sum
+    (basic_tax + import_tax).round(2) #avoid floating point arithmetic issues
+  end
+
+  def final_cost
+    (shelf_price + tax_sum).round(2) #avoid floating point arithmetic issues
   end
 
   private
