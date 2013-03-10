@@ -1,4 +1,7 @@
+require File.expand_path('../Module/tax_calculator', __FILE__)
+
 class Product
+  include TaxCalculator
 
   def initialize(name, shelf_price)
     @name, @shelf_price = name, shelf_price.to_f
