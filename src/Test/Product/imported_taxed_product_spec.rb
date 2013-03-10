@@ -1,4 +1,4 @@
-require File.expand_path('../../imported_taxed_product', __FILE__)
+require File.expand_path('../../../Product/imported_taxed_product', __FILE__)
 
 describe ImportedTaxedProduct do 
 

@@ -1,4 +1,4 @@
-require File.expand_path('../../product', __FILE__)
+require File.expand_path('../../../Product/product', __FILE__)
 
 describe Product do 
 
