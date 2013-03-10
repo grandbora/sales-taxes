@@ -8,16 +8,18 @@ describe Product do
     @product_1 = Product.new(@name_1, @shelf_price_1)
 
     @name_2 = 'p_name2'
-    @shelf_price_2 = 40.15
+    @shelf_price_2 = 40
     @product_2 = Product.new(@name_2, @shelf_price_2)
   end
 
   it "has a name and shelf price" do
     @product_1.name.should eq(@name_1)
     @product_1.shelf_price.should eq(@shelf_price_1)
+    @product_1.shelf_price.should be_kind_of(Float)
 
     @product_2.name.should eq(@name_2)
     @product_2.shelf_price.should eq(@shelf_price_2)
+    @product_2.shelf_price.should be_kind_of(Float)
   end
 
   it "a product's tax value is always 0" do
