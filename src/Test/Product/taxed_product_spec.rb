@@ -16,10 +16,10 @@ describe TaxedProduct do
     @product_3 = TaxedProduct.new(@name_3, @shelf_price_3)
   end
 
-  it "a taxed product has 10% sales tax" do
-    @product_1.sales_tax.should eq(2.25)
-    @product_2.sales_tax.should eq(4.05)
-    @product_3.sales_tax.should eq(0.6)
+  it "a taxed product has 10% basic tax" do
+    @product_1.basic_tax.should eq(2.25)
+    @product_2.basic_tax.should eq(4.05)
+    @product_3.basic_tax.should eq(0.6)
   end
 
   it "a taxed product doesnt have import tax" do

@@ -23,8 +23,8 @@ describe Product do
   end
 
   it "a product's tax value is always 0" do
-    @product_1.sales_tax.should eq(0)
-    @product_2.sales_tax.should eq(0)
+    @product_1.basic_tax.should eq(0)
+    @product_2.basic_tax.should eq(0)
 
     @product_1.import_tax.should eq(0)
     @product_2.import_tax.should eq(0)

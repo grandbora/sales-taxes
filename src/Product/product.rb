@@ -5,7 +5,7 @@ class Product
 
   def initialize(name, shelf_price)
     @name, @shelf_price = name, shelf_price.to_f
-    set_sales_tax_percent(0)
+    set_basic_tax_percent(0)
     set_import_tax_percent(0)
   end
 
@@ -17,8 +17,8 @@ class Product
     @shelf_price
   end
 
-  def sales_tax
-    calculate_tax(@shelf_price, @sales_tax_percent)
+  def basic_tax
+    calculate_tax(@shelf_price, @basic_tax_percent)
   end
 
   def import_tax
@@ -26,8 +26,8 @@ class Product
   end
 
   private
-  def set_sales_tax_percent(sales_tax_percent)
-    @sales_tax_percent = sales_tax_percent
+  def set_basic_tax_percent(basic_tax_percent)
+    @basic_tax_percent = basic_tax_percent
   end
 
   def set_import_tax_percent(import_tax_percent)
