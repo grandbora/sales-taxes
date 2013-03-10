@@ -1,19 +1,19 @@
-require File.expand_path('../../../Product/imported_product', __FILE__)
+require File.expand_path('../../../Product/imported_exempt_product', __FILE__)
 
-describe ImportedProduct do 
+describe ImportedExemptProduct do 
 
   before(:each) do
     @name_1 = 'p_name1'
     @shelf_price_1 = 22.17
-    @product_1 = ImportedProduct.new(@name_1, @shelf_price_1)
+    @product_1 = ImportedExemptProduct.new(@name_1, @shelf_price_1)
 
     @name_2 = 'p_name2'
     @shelf_price_2 = 40.15
-    @product_2 = ImportedProduct.new(@name_2, @shelf_price_2)
+    @product_2 = ImportedExemptProduct.new(@name_2, @shelf_price_2)
 
     @name_3 = 'p_name3'
     @shelf_price_3 = 6
-    @product_3 = ImportedProduct.new(@name_3, @shelf_price_3)
+    @product_3 = ImportedExemptProduct.new(@name_3, @shelf_price_3)
   end
 
   it "an imported product doesnt have basic tax" do
