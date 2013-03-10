@@ -5,4 +5,4 @@ module ImportTax
     set_import_tax_percent(5)
   end
   
-end 
+end

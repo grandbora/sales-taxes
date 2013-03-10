@@ -16,5 +16,4 @@ module TaxCalculator
     (real_tax * 20).ceil().to_f / 20
   end
 
-
-end 
+end
