@@ -1,6 +1,6 @@
 require File.expand_path('../../imported_taxed_product', __FILE__)
 
-describe TaxedProduct do 
+describe ImportedTaxedProduct do 
 
   before(:each) do
     @name_1 = 'p_name1'
