@@ -33,6 +33,8 @@ describe Basket do
     basket_products[2].quantity.should eq(1)
     basket_products[2].name.should eq('chocolate bar')
     basket_products[2].final_cost.should eq(0.85)
+
+    basket.total_tax.should eq(1.50)
   end
 
 end

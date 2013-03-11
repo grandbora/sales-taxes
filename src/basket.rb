@@ -19,6 +19,13 @@ class Basket
     @product_list
   end
 
+  def total_tax
+    total_tax = 0
+    get_products.each do |product|
+      total_tax += 0.50
+    end 
+  end
+
   private
   def get_product_class(is_exempt, is_imported)
     return ImportedExemptProduct if is_exempt && is_imported
