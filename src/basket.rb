@@ -30,7 +30,7 @@ class Basket
   def total_price
     total_tax = 0
     get_products.each do |product|
-      total_tax += product.tax_sum
+      total_tax += product.final_price
     end
     total_tax
   end
