@@ -24,7 +24,7 @@ class Basket
     get_products.each do |product|
       total_tax += product.tax_sum
     end
-    total_tax
+    total_tax.round(2)
   end
 
   def total_price
@@ -32,7 +32,7 @@ class Basket
     get_products.each do |product|
       total_tax += product.final_price
     end
-    total_tax
+    total_tax.round(2)
   end
 
   private
