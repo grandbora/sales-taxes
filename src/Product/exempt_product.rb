@@ -17,6 +17,10 @@ class ExemptProduct
     @shelf_price
   end
 
+  def quantity
+    1 # multiple quantities are not supported, there isn't such requirement yet
+  end
+
   def basic_tax
     calculate_tax(shelf_price, @basic_tax_percent)
   end

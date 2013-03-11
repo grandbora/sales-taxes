@@ -12,14 +12,16 @@ describe ExemptProduct do
     @product_2 = ExemptProduct.new(@name_2, @shelf_price_2)
   end
 
-  it "has a name and shelf price" do
+  it "has a name, shelf price and quantity" do
     @product_1.name.should eq(@name_1)
     @product_1.shelf_price.should eq(@shelf_price_1)
-    @product_1.shelf_price.should be_kind_of(Float)
+    @product_1.shelf_price.should be_an_instance_of(Float)
+    @product_1.quantity.should eq(1)
 
     @product_2.name.should eq(@name_2)
     @product_2.shelf_price.should eq(@shelf_price_2)
-    @product_2.shelf_price.should be_kind_of(Float)
+    @product_2.shelf_price.should be_an_instance_of(Float)
+    @product_2.quantity.should eq(1)
   end
 
   it "an exempt product's tax value is always 0" do
