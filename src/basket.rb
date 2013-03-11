@@ -22,8 +22,17 @@ class Basket
   def total_tax
     total_tax = 0
     get_products.each do |product|
-      total_tax += 0.50
-    end 
+      total_tax += product.tax_sum
+    end
+    total_tax
+  end
+
+  def total_price
+    total_tax = 0
+    get_products.each do |product|
+      total_tax += product.tax_sum
+    end
+    total_tax
   end
 
   private

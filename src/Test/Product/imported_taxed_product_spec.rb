@@ -35,9 +35,9 @@ describe ImportedTaxedProduct do
   end
 
   it "has a final cost" do
-    @product_1.final_cost.should eq(25.57)
-    @product_2.final_cost.should eq(46.25)
-    @product_3.final_cost.should eq(6.9)
+    @product_1.final_price.should eq(25.57)
+    @product_2.final_price.should eq(46.25)
+    @product_3.final_price.should eq(6.9)
   end
 
 end

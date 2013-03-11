@@ -33,7 +33,7 @@ class ExemptProduct
     (basic_tax + import_tax).round(2) #avoid floating point arithmetic issues
   end
 
-  def final_cost
+  def final_price
     (shelf_price + tax_sum).round(2) #avoid floating point arithmetic issues
   end
 

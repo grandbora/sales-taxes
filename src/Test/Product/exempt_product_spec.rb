@@ -36,8 +36,8 @@ describe ExemptProduct do
   end
 
   it "has a final cost which includes tax prices" do
-    @product_1.final_cost.should eq(22.17)
-    @product_2.final_cost.should eq(40)
+    @product_1.final_price.should eq(22.17)
+    @product_2.final_price.should eq(40)
   end
 
 end

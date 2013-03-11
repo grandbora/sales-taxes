@@ -22,19 +22,20 @@ describe Basket do
     basket_products[0].should be_an_instance_of(ExemptProduct)
     basket_products[0].quantity.should eq(1)
     basket_products[0].name.should eq('book')
-    basket_products[0].final_cost.should eq(12.49)
+    basket_products[0].final_price.should eq(12.49)
 
     basket_products[1].should be_an_instance_of(TaxedProduct)
     basket_products[1].quantity.should eq(1)
     basket_products[1].name.should eq('music CD')
-    basket_products[1].final_cost.should eq(16.49)
+    basket_products[1].final_price.should eq(16.49)
 
     basket_products[2].should be_an_instance_of(ExemptProduct)
     basket_products[2].quantity.should eq(1)
     basket_products[2].name.should eq('chocolate bar')
-    basket_products[2].final_cost.should eq(0.85)
+    basket_products[2].final_price.should eq(0.85)
 
     basket.total_tax.should eq(1.50)
+    #basket.total_price.should eq(29.83)
   end
 
 end

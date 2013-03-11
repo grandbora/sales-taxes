@@ -35,9 +35,9 @@ describe ImportedExemptProduct do
   end
 
   it "has a final cost" do
-    @product_1.final_cost.should eq(23.32)
-    @product_2.final_cost.should eq(42.2)
-    @product_3.final_cost.should eq(6.3)
+    @product_1.final_price.should eq(23.32)
+    @product_2.final_price.should eq(42.2)
+    @product_3.final_price.should eq(6.3)
   end
 
 end

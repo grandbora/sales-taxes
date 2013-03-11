@@ -35,9 +35,9 @@ describe TaxedProduct do
   end
 
   it "has a final cost" do
-    @product_1.final_cost.should eq(24.42)
-    @product_2.final_cost.should eq(44.2)
-    @product_3.final_cost.should eq(6.6)
+    @product_1.final_price.should eq(24.42)
+    @product_2.final_price.should eq(44.2)
+    @product_3.final_price.should eq(6.6)
   end
 
 end
